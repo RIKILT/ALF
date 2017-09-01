@@ -1,2 +1,5 @@
-# ALF
-Amplification of Linearly-enriched Fragments
+# Amplification of Linearly-enriched Fragments (ALF) GALAXY workflow
+
+<b>Description<b>
+ALF (Amplification of Linearly-enriched fragments) is a GALAXY workflow developed for the identification of unknown GMO-related sequences starting from known GMO elements using PacBio data. The workflow was designed to answer the following questions: (1) is there any potential evidence for UGMOs, (2) can known GMOs be identified and (3) can a list of potential GMOs be prepared. 
+The workflow consists of six main steps: 1) pre-processing of CCS reads involving quality trimming, length selection, removal of adaptors, 2)  selection of reads containing an enrichment primer 3) the primer selected are clustered 4) Megablast of the cluster representative CCS read (crCCS) against the event database 5) Megablast of the remaining crCCS reads against the CAF database 6) Megablast of the remaining crCCS reads against the element database. The workflow makes use of the frequently-used software tools Cutadapt 1.8, UPARSE, FASTQ to FASTA converter 1.0, Cut columes 1.0.2, FASTA to tabular 1.1.0, NCBI BLAST plus 2.2.31, Package_bed_tools_2_24 containing bedtools 2.24, Reverse complement 1.0.0, Filter sequences by ID 0.2.2, Tabular to FASA 1.1.0, Usearch cluster otus 1.0.0 and Usearch_dereplication 1.0.0. Note that the tools that are available on standard release of Galaxy platform, If some of the tools that I used in pipeline are no longer come with the standard release, please download them from Galaxy toolshed.
